@@ -1,4 +1,4 @@
-package vk14;
+/*package vk14;
 
 import java.text.DecimalFormat;
 import java.util.InputMismatchException;
@@ -108,3 +108,4 @@ class KelvotonPainoPoikkeus extends Exception {
 	}
 
 }
+*/
