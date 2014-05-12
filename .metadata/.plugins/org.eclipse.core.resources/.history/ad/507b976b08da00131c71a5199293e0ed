@@ -9,7 +9,8 @@ public class YstavaSovellus {
 
 		HashMap<String, Ystava> ystavat = new HashMap<>();
 		
-
+			
+		}
 		Scanner lukija = new Scanner(System.in);
 
 		int toiminto;

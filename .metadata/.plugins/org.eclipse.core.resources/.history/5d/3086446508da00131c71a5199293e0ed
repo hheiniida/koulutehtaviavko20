@@ -8,7 +8,6 @@ public class YstavaSovellus {
 	public static void main(String[] args) {
 
 		HashMap<String, Ystava> ystavat = new HashMap<>();
-		
 
 		Scanner lukija = new Scanner(System.in);
 
