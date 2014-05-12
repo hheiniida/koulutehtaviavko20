@@ -20,10 +20,10 @@ public class YstavaSovellus {
 		boolean olenkoPaalla = true;
 
 		while (olenkoPaalla ==true) {
-			System.out.println("1) Lisää ystävä\n2) Etsi ystävä\n3) Poista Ystävä\n4) Tulosta ystävät\n0) Lopeta");
-			System.out.print("Valitse: ");
-			toiminto = lukija.nextInt();
-			
+			System.out
+					.println("1) Lisää ystävä\n2) Etsi ystävä\n3) Poista Ystävä\n4) Tulosta ystävät\n0) Lopeta");
+			System.out.print("Valitse: ");toiminto = lukija.nextInt();
+
 			switch (toiminto) {
 			case 1:
 				lisaaYstava();
@@ -56,8 +56,8 @@ public class YstavaSovellus {
 		lukija.nextLine();
 		String poistettava = lukija.nextLine();
 
-		System.out.println("Poistetaan ystävän tiedot: \n"+ ystavat.get(poistettava).toString());
-		
+		System.out.print("Poistetaan ystävän tiedot: ");
+		ystavat.get(poistettava).toString();
 
 		ystavat.remove(ystavat.get(poistettava));
 
@@ -65,7 +65,7 @@ public class YstavaSovellus {
 
 	private static void etsiYstava() {
 		System.out.print("Anna ystävän lempinimi: ");
-		lukija.nextLine();
+		lukija.next();
 		String etsittava = lukija.nextLine();
 		if (!ystavat.containsKey(etsittava)) {
 
@@ -88,16 +88,11 @@ public class YstavaSovellus {
 		String nimi;
 		String puhelin;
 		String syntymapaivamaara;
-		
-		
-		lukija.nextLine();
+
 		System.out.print("Anna ystävän lempinimi: ");
 		lempinimi = lukija.nextLine();
-		if(ystavat.containsKey(lempinimi)){
-			System.out.println("Olet jo lisännyt tämän ystävän\nYstävän tiedot: "+ystavat.get(lempinimi));
-			return;
-		}
 		
+
 		System.out.print("Anna ystävän nimi: ");
 		nimi = lukija.nextLine();
 		
@@ -126,7 +121,9 @@ class Ystava {
 
 	}
 
-	public Ystava(String lempinimi, String nimi, String puhelin, String syntymapaivamaara) {
+	public Ystava(String lempinimi, String nimi, String puhelin,
+			String syntymapaivamaara) {
+		super();
 		this.lempinimi = lempinimi;
 		this.nimi = nimi;
 		this.puhelin = puhelin;

@@ -56,7 +56,7 @@ public class YstavaSovellus {
 		lukija.nextLine();
 		String poistettava = lukija.nextLine();
 
-		System.out.println("Poistetaan ystävän tiedot: \n"+ ystavat.get(poistettava).toString());
+		System.out.println("Poistetaan ystävän tiedot: "+ ystavat.get(poistettava).toString());
 		
 
 		ystavat.remove(ystavat.get(poistettava));
@@ -93,10 +93,7 @@ public class YstavaSovellus {
 		lukija.nextLine();
 		System.out.print("Anna ystävän lempinimi: ");
 		lempinimi = lukija.nextLine();
-		if(ystavat.containsKey(lempinimi)){
-			System.out.println("Olet jo lisännyt tämän ystävän\nYstävän tiedot: "+ystavat.get(lempinimi));
-			return;
-		}
+
 		
 		System.out.print("Anna ystävän nimi: ");
 		nimi = lukija.nextLine();

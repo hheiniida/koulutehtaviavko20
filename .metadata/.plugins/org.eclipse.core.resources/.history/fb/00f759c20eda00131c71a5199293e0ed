@@ -93,10 +93,7 @@ public class YstavaSovellus {
 		lukija.nextLine();
 		System.out.print("Anna ystävän lempinimi: ");
 		lempinimi = lukija.nextLine();
-		if(ystavat.containsKey(lempinimi)){
-			System.out.println("Olet jo lisännyt tämän ystävän\nYstävän tiedot: "+ystavat.get(lempinimi));
-			return;
-		}
+
 		
 		System.out.print("Anna ystävän nimi: ");
 		nimi = lukija.nextLine();

@@ -56,8 +56,8 @@ public class YstavaSovellus {
 		lukija.nextLine();
 		String poistettava = lukija.nextLine();
 
-		System.out.println("Poistetaan ystävän tiedot: \n"+ ystavat.get(poistettava).toString());
-		
+		System.out.print("Poistetaan ystävän tiedot: ");
+		ystavat.get(poistettava).toString();
 
 		ystavat.remove(ystavat.get(poistettava));
 
@@ -65,7 +65,6 @@ public class YstavaSovellus {
 
 	private static void etsiYstava() {
 		System.out.print("Anna ystävän lempinimi: ");
-		lukija.nextLine();
 		String etsittava = lukija.nextLine();
 		if (!ystavat.containsKey(etsittava)) {
 
@@ -89,16 +88,12 @@ public class YstavaSovellus {
 		String puhelin;
 		String syntymapaivamaara;
 		
-		
-		lukija.nextLine();
 		System.out.print("Anna ystävän lempinimi: ");
 		lempinimi = lukija.nextLine();
-		if(ystavat.containsKey(lempinimi)){
-			System.out.println("Olet jo lisännyt tämän ystävän\nYstävän tiedot: "+ystavat.get(lempinimi));
-			return;
-		}
 		
+
 		System.out.print("Anna ystävän nimi: ");
+		lukija.next();
 		nimi = lukija.nextLine();
 		
 
@@ -126,7 +121,9 @@ class Ystava {
 
 	}
 
-	public Ystava(String lempinimi, String nimi, String puhelin, String syntymapaivamaara) {
+	public Ystava(String lempinimi, String nimi, String puhelin,
+			String syntymapaivamaara) {
+		super();
 		this.lempinimi = lempinimi;
 		this.nimi = nimi;
 		this.puhelin = puhelin;
