@@ -1,0 +1,51 @@
+package vk14;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class YstavaSovellus {
+	
+	
+	public static void main(String[] args) {
+		HashMap<String, Ystava> ystavat = new HashMap<>();
+		Scanner lukija = new Scanner(System.in);
+		int toiminto;
+		
+		while(true){
+			System.out.print("1) Lisää ystävä\n2) Etsi ystävä\n3) Poista Ystävä\n4) Tulosta ystävät\n0) Lopeta");
+			toiminto = lukija. nextInt();
+			
+			
+			switch (valinta) {
+			case 1:
+				
+				break;
+			case 2:
+				
+				break;
+			case 3:
+	
+				break;
+			case 4:
+	
+				break;
+			case 0:
+		
+				break;
+			default:
+				break;
+			}
+		}
+
+	}
+
+}
+class Ystava{
+	String lempinimi;
+	String nimi;
+	String puhelin;
+	String syntymapaivamaara;
+	public Ystava(){
+		
+	}
+}
