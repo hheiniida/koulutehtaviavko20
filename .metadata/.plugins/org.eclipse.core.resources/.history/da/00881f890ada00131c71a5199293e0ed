@@ -65,7 +65,6 @@ public class YstavaSovellus {
 
 	private static void etsiYstava() {
 		System.out.print("Anna ystävän lempinimi: ");
-		lukija.next();
 		String etsittava = lukija.nextLine();
 		if (!ystavat.containsKey(etsittava)) {
 
@@ -90,21 +89,17 @@ public class YstavaSovellus {
 		String syntymapaivamaara;
 
 		System.out.print("Anna ystävän lempinimi: ");
-		lukija.next();
 		lempinimi = lukija.nextLine();
-		
+		lukija.next();
 
 		System.out.print("Anna ystävän nimi: ");
 		nimi = lukija.nextLine();
-		
 
 		System.out.print("Anna ystävän puhelinnumero: ");
 		puhelin = lukija.nextLine();
-		
 
 		System.out.print("Anna ystävän syntymäpäivämäärä muodossa pp.kk.vvvv: ");
 		syntymapaivamaara = lukija.nextLine();
-		
 
 		ystava = new Ystava(lempinimi, nimi, puhelin, syntymapaivamaara);
 		ystavat.put(ystava.getLempinimi(), ystava);

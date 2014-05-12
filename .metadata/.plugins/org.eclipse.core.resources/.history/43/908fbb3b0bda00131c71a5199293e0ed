@@ -65,8 +65,8 @@ public class YstavaSovellus {
 
 	private static void etsiYstava() {
 		System.out.print("Anna ystävän lempinimi: ");
-		lukija.next();
 		String etsittava = lukija.nextLine();
+		lukija.next();
 		if (!ystavat.containsKey(etsittava)) {
 
 			System.out.print("Ystävää, jonka lempinimi on " + etsittava

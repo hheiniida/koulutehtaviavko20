@@ -53,7 +53,7 @@ public class YstavaSovellus {
 
 	private static void poistaYstava() {
 		System.out.print("Anna ystävän lempinimi: ");
-		lukija.nextLine();
+		lukija.next();
 		String poistettava = lukija.nextLine();
 
 		System.out.print("Poistetaan ystävän tiedot: ");
@@ -65,7 +65,6 @@ public class YstavaSovellus {
 
 	private static void etsiYstava() {
 		System.out.print("Anna ystävän lempinimi: ");
-		lukija.next();
 		String etsittava = lukija.nextLine();
 		if (!ystavat.containsKey(etsittava)) {
 
@@ -75,7 +74,7 @@ public class YstavaSovellus {
 
 		} else {
 
-			System.out.println("Ystävän tiedot: "
+			System.out.print("Ystävän tiedot: "
 					+ ystavat.get(etsittava).toString());
 
 		}
@@ -90,21 +89,17 @@ public class YstavaSovellus {
 		String syntymapaivamaara;
 
 		System.out.print("Anna ystävän lempinimi: ");
-		lukija.next();
 		lempinimi = lukija.nextLine();
-		
 
 		System.out.print("Anna ystävän nimi: ");
 		nimi = lukija.nextLine();
-		
 
 		System.out.print("Anna ystävän puhelinnumero: ");
 		puhelin = lukija.nextLine();
-		
 
-		System.out.print("Anna ystävän syntymäpäivämäärä muodossa pp.kk.vvvv: ");
+		System.out
+				.print("Anna ystävän syntymäpäivämäärä muodossa pp.kk.vvvv: ");
 		syntymapaivamaara = lukija.nextLine();
-		
 
 		ystava = new Ystava(lempinimi, nimi, puhelin, syntymapaivamaara);
 		ystavat.put(ystava.getLempinimi(), ystava);
