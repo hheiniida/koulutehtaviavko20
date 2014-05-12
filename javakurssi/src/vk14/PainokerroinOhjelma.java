@@ -1,6 +1,7 @@
 package vk14;
 
 import java.text.DecimalFormat;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class PainokerroinOhjelma {
@@ -33,7 +34,7 @@ public class PainokerroinOhjelma {
         do {
             try {
                 pituus = kysyPituus();
-
+                okPituus = true;
             } catch (InputMismatchException e) {
                 System.out.println("Pituus pitää olla desimaaliluku!");
             } catch (KelvotonPituusPoikkeus e) {
@@ -47,16 +48,16 @@ public class PainokerroinOhjelma {
         painokerroin = laskePainokerroin(paino, pituus);
         DecimalFormat desimaalit = new DecimalFormat("0.00");
         System.out.println("\nPainokerroin on "
-                + desimaalit.format(painokerroin + " (kun painko on " + paino
+                + desimaalit.format(painokerroin) + " (kun paino on " + paino
                         + " kg ja pituus on " + desimaalit.format(pituus)
-                        + " metreinä)"));
+                        + " metreinä)");
     }
 
     private static int kysyPaino() throws KelvotonPainoPoikkeus, Exception {
         int paino;
 
         try {
-            System.out.println("Anna paino (kg): ");
+            System.out.print("Anna paino (kg): ");
             paino = lukija.nextInt();
             if (paino <= 0) {
                 throw new KelvotonPainoPoikkeus("Painon pitäisi olla > 0");
@@ -71,35 +72,39 @@ public class PainokerroinOhjelma {
         double pituus;
        
         try{
-            System.out.println("Anna pituus (m): ");
+            System.out.print("Anna pituus (m): ");
             pituus=lukija.nextDouble();
             if(pituus<=0 || pituus >=3.0){
-                throw new KelvotonPituusPoikkeus("Ihmisen pituus pitää olla >0 ja alle 3 metriä");
+                throw new KelvotonPituusPoikkeus("Ihmisen pituus pitää olla > 0 ja alle 3 metriä");
             }return pituus;
         }catch (Exception e){
             lukija.nextLine();
             throw e;
         }
     }
-    private static laskePainokerroin(int paino, double pituus){
+    private static double laskePainokerroin(int paino, double pituus){
         double painokerroin;
         if(pituus!=0){
-            painokerroin=paino/(pituus*pituus);
+            return painokerroin=paino/(pituus*pituus);
         }
         else{
             painokerroin=0;
             return painokerroin;
         }
-           
     }
-     calss KelvotonPainoPoikkeus extends Exception{
-        public KelvotonPainoPoikkeus(String viesti){
-           
-        }
+    
     }
-    class KelvotonPituusPoikkeus extends Exception{
-        public KelvotonPituusPoikkeus(String viesti){
-            }
-        }
-    }
+class KelvotonPituusPoikkeus extends Exception {
 
+	public KelvotonPituusPoikkeus(String viesti) {
+		super(viesti);
+	}
+
+}
+class KelvotonPainoPoikkeus extends Exception {
+
+	public KelvotonPainoPoikkeus(String viesti) {
+		super(viesti);
+	}
+
+}

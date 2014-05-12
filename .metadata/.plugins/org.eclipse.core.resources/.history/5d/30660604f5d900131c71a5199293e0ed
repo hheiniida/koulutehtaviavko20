@@ -1,0 +1,5 @@
+package vk14;
+
+public class KelvotonPainoPoikkeus extends Exception {
+
+}
