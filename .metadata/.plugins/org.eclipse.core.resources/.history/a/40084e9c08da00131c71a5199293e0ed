@@ -9,9 +9,12 @@ public class YstavaSovellus {
 
 	static Scanner lukija = new Scanner(System.in);
 
-
+<<<<<<< HEAD
+		HashMap<String, Ystava> ystavat = new HashMap<>();
+		
+=======
 	static HashMap<String, Ystava> ystavat = new HashMap<>();
-
+>>>>>>> 5ed03ff7966d697f3078d21c8e2a1ba97cf95678
 
 	public static void main(String[] args) {
 
@@ -21,7 +24,7 @@ public class YstavaSovellus {
 
 		while (olenkoPaalla ==true) {
 			System.out
-					.println("1) Lisää ystävä\n2) Etsi ystävä\n3) Poista Ystävä\n4) Tulosta ystävät\n0) Lopeta");
+					.print("1) Lisää ystävä\n2) Etsi ystävä\n3) Poista Ystävä\n4) Tulosta ystävät\n0) Lopeta");
 			toiminto = lukija.nextInt();
 
 			switch (toiminto) {

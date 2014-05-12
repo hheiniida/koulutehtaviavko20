@@ -21,7 +21,7 @@ public class YstavaSovellus {
 
 		while (olenkoPaalla ==true) {
 			System.out
-					.println("1) Lisää ystävä\n2) Etsi ystävä\n3) Poista Ystävä\n4) Tulosta ystävät\n0) Lopeta");
+					.print("1) Lisää ystävä\n2) Etsi ystävä\n3) Poista Ystävä\n4) Tulosta ystävät\n0) Lopeta");
 			toiminto = lukija.nextInt();
 
 			switch (toiminto) {
