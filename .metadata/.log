@@ -722,3 +722,10 @@ Caused by: java.lang.OutOfMemoryError: Requested array size exceeds VM limit
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.OutOfMemoryError: Requested array size exceeds VM limit
+
+!ENTRY org.eclipse.core.resources 2 2 2014-05-12 22:15:28.531
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2014-05-12 22:15:28.531
+!MESSAGE The project description file (.project) for 'Viikko7' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2014-05-12 22:15:28.531
+!MESSAGE The project description file (.project) for 'Vk9ja10' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
