@@ -1,0 +1,10 @@
+package vk7;
+
+public class HenkiloSovellus {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

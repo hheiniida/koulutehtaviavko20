@@ -1,0 +1,42 @@
+package vk13;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class PelaajalistaSovellus {
+
+	public static void main(String[] args) {
+		PelaajalistaSovellus sovellus = new PelaajalistaSovellus();
+
+		int valinta = -1;
+		Scanner input = new Scanner(System.in);
+
+		do {
+			System.out.println("\n1. Lisää pelaaja");
+			System.out.println("2. Hae pelaaja");
+			System.out.println("3. Näytä pelaajat");
+			System.out.println("0. Lopetus");
+
+			System.out.print("Anna valintasi (0-3): ");
+			valinta = input.nextInt();
+
+			switch (valinta) {
+			case 1:
+				
+				break;
+			case 2:
+				
+				break;
+			case 3:
+				
+				break;
+			case 0:
+				
+				break;
+			default:
+				System.out.println("Virheellinen valinta");
+			}
+		} while (valinta != 0);
+	}
+}
